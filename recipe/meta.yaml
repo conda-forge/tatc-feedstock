@@ -16,18 +16,17 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9, <3.11
     - pip
   run:
-    - python >=3.6
-    - geopandas
+    - python >=3.9, <3.11
+    - geopandas >=0.14
     - numba
     - numpy
     - pandas
-    - pydantic
-    - pyproj
-    - shapely
-    - skyfield
+    - pydantic >=2.6
+    - shapely >=2
+    - skyfield >=1.48
     - sgp4
 
 test:
