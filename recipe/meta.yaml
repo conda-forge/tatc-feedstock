@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9, <3.11
+    - python >=3.8, <3.13
     - pip
     - setuptools
   run:
-    - python >=3.9, <3.11
-    - geopandas >=0.14
+    - python >=3.8, <3.13
+    - geopandas >=0.13.2
     - numba
     - numpy
     - pandas
