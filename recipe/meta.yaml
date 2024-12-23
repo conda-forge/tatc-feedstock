@@ -1,5 +1,6 @@
 {% set name = "tatc" %}
-{% set version = "3.2.2" %}
+{% set version = "3.3.0" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://github.com/code-lab-org/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ed2fed3e446cf98e04a6cd517751aa820b0a608873c63c5fe244d88594907804
+  sha256: a43e267c96a1091f0a2a07a9312209f807db9357229debc70e130c2a8443b011
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -16,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8, <3.13
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8, <3.13
+    - python >={{ python_min }}, <3.13
     - geopandas >=0.13.2
     - numba
     - numpy
@@ -36,6 +37,7 @@ test:
   imports:
     - tatc
   requires:
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
