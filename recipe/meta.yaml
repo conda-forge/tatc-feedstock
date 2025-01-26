@@ -1,5 +1,5 @@
 {% set name = "tatc" %}
-{% set version = "3.3.0" %}
+{% set version = "3.4.1" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/code-lab-org/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a43e267c96a1091f0a2a07a9312209f807db9357229debc70e130c2a8443b011
+  sha256: bf350b8851d057baca65718c398181fa2d267d454161f59efb18d9db53edc2a1
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -27,9 +27,11 @@ requirements:
     - numpy
     - pandas
     - pydantic >=2.6
+    - pyyaml
     - shapely >=2
     - skyfield >=1.48
     - sgp4
+    - spiceypy
 
 test:
   source_files:
