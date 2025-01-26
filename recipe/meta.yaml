@@ -27,9 +27,11 @@ requirements:
     - numpy
     - pandas
     - pydantic >=2.6
+    - pyyaml
     - shapely >=2
     - skyfield >=1.48
     - sgp4
+    - spiceypy
 
 test:
   source_files:
