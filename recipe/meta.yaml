@@ -1,6 +1,6 @@
 {% set name = "tatc" %}
 {% set version = "3.5.0" %}
-{% set python_min = "3.8" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -27,11 +27,13 @@ requirements:
     - numpy
     - pandas
     - pydantic >=2.6
+    - pyproj
     - pyyaml
     - shapely >=2
     - skyfield >=1.48
     - sgp4
     - spiceypy
+    - typing-extensions
 
 test:
   source_files:
