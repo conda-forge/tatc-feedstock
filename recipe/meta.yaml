@@ -1,5 +1,5 @@
 {% set name = "tatc" %}
-{% set version = "3.5.0" %}
+{% set version = "3.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/code-lab-org/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 4362bc289ba09cbea1d9dbecf25c10b90f81876cfdec16a2d08644107ef3baa7
+  sha256: 956bc1fa9662bb9d0bae64ffb2bdf094729b68fbce1a416e3a3103579a86a4c9
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
