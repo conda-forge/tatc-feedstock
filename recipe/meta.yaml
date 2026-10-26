@@ -1,5 +1,5 @@
 {% set name = "tatc" %}
-{% set version = "3.5.1" %}
+{% set version = "3.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/code-lab-org/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 956bc1fa9662bb9d0bae64ffb2bdf094729b68fbce1a416e3a3103579a86a4c9
+  sha256: f105f1c8724de5a34b42e0bd2fe264f1961a89a499be970ca4481279e731fa44
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -42,6 +42,7 @@ test:
   requires:
     - python {{ python_min }}
     - pip
+    - rasterio
   commands:
     - pip check
     - python -m unittest
