@@ -21,15 +21,15 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - geopandas >=0.13.2
+    - geopandas >=1.0
     - numba
     - numpy
-    - pandas
+    - pandas >=2.0
     - pydantic >=2.6
     - pyproj
     - pyyaml
-    - shapely >=2
-    - skyfield >=1.48
+    - shapely >=2.0.1
+    - skyfield >=1.49
     - sgp4
     - spiceypy
     - typing-extensions
@@ -37,6 +37,8 @@ requirements:
 test:
   source_files:
     - tests
+    - docs/validation/catalog_page.py
+    - docs/validation/systems_page.py
   imports:
     - tatc
   requires:
